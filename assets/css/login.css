@@ -151,7 +151,6 @@ button:hover {
 
 .btn-create-account {
     background-color: #28a745;
-    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -159,6 +158,10 @@ button:hover {
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
     margin-top: 10px;
+}
+.btn-create-account a{
+    text-decoration: none;
+    color: white;
 }
 
 .btn-create-account:hover {
