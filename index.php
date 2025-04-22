@@ -1,3 +1,6 @@
+<?php
+// index.php
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,13 +12,13 @@
     <link href="/assets/icons/css/all.css" rel="stylesheet" />
     <link rel="icon" href="assets/images/icon_head.svg">
 </head>
+
 <body>
     <header>
         <div class="header-container">
             <div class="header-left">
                 <h1>Tapetes da Carlinha</h1>
             </div>
-
             <div class="header-center">
                 <ul>
                     <li><a href="#">Início</a></li>
@@ -23,39 +26,36 @@
                     <li><a href="#contatos">Contato</a></li>
                 </ul>
             </div>
-
             <div class="header-right">
                 <a href="shop.html"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="login.html"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
     </header>
+
     <main>
         <!-- Seção de Destaques -->
         <section id="destaques">
             <h2>Destaques</h2>
             <div class="produtos">
-                <!-- Produto 1 em destaque -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 1">
-                    <h3>Tapete Floral</h3>
-                    <span>R$ 150,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 2 em destaque -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 2">
-                    <h3>Tapete Redondo</h3>
-                    <span>R$ 120,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 3 em destaque -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 3">
-                    <h3>Tapete de Jogo de Banheiro</h3>
-                    <span>R$ 200,00</span>
-                    <button>Comprar</button>
-                </div>
+                <?php
+                // Simulando produtos em destaque (futuramente virão do banco de dados)
+                $destaques = [
+                    ['nome' => 'Tapete Floral', 'preco' => '150,00'],
+                    ['nome' => 'Tapete Redondo', 'preco' => '120,00'],
+                    ['nome' => 'Tapete de Jogo de Banheiro', 'preco' => '200,00']
+                ];
+
+                foreach ($destaques as $produto) {
+                    echo '
+                    <div class="card">
+                        <img src="assets/images/teste.jpeg" alt="' . $produto['nome'] . '">
+                        <h3>' . $produto['nome'] . '</h3>
+                        <span>R$ ' . $produto['preco'] . '</span>
+                        <button>Comprar</button>
+                    </div>';
+                }
+                ?>
             </div>
         </section>
 
@@ -63,73 +63,34 @@
         <section id="produtos">
             <h2>Todos os Produtos</h2>
             <div class="produtos">
-                <!-- Produto 1 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 4">
-                    <h3>Tapete Quadrado</h3>
-                    <span>R$ 110,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 2 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 5">
-                    <h3>Tapete de Cozinha</h3>
-                    <span>R$ 80,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 3 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 6">
-                    <h3>Tapete com Franja</h3>
-                    <span>R$ 130,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 4 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 7">
-                    <h3>Tapete Retangular</h3>
-                    <span>R$ 140,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 5 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 8">
-                    <h3>Tapete de Sala</h3>
-                    <span>R$ 170,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 6 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 9">
-                    <h3>Tapete Infantil</h3>
-                    <span>R$ 95,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 7 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 10">
-                    <h3>Tapete de Banheiro</h3>
-                    <span>R$ 110,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 8 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 11">
-                    <h3>Tapete de Entrada</h3>
-                    <span>R$ 85,00</span>
-                    <button>Comprar</button>
-                </div>
-                <!-- Produto 9 -->
-                <div class="card">
-                    <img src="assets/images/teste.jpeg" alt="Tapete 12">
-                    <h3>Tapete Antiderrapante</h3>
-                    <span>R$ 120,00</span>
-                    <button>Comprar</button>
-                </div>
+                <?php
+                // Simulando lista de produtos (futuramente virão do banco de dados)
+                $todosProdutos = [
+                    ['nome' => 'Tapete Quadrado', 'preco' => '110,00'],
+                    ['nome' => 'Tapete de Cozinha', 'preco' => '80,00'],
+                    ['nome' => 'Tapete com Franja', 'preco' => '130,00'],
+                    ['nome' => 'Tapete Retangular', 'preco' => '140,00'],
+                    ['nome' => 'Tapete de Sala', 'preco' => '170,00'],
+                    ['nome' => 'Tapete Infantil', 'preco' => '95,00'],
+                    ['nome' => 'Tapete de Banheiro', 'preco' => '110,00'],
+                    ['nome' => 'Tapete de Entrada', 'preco' => '85,00'],
+                    ['nome' => 'Tapete Antiderrapante', 'preco' => '120,00']
+                ];
+
+                foreach ($todosProdutos as $produto) {
+                    echo '
+                    <div class="card">
+                        <img src="assets/images/teste.jpeg" alt="' . $produto['nome'] . '">
+                        <h3>' . $produto['nome'] . '</h3>
+                        <span>R$ ' . $produto['preco'] . '</span>
+                        <button>Comprar</button>
+                    </div>';
+                }
+                ?>
             </div>
         </section>
     </main>
-    
+
     <footer id="contatos">
         <div id="footer_content">
 
